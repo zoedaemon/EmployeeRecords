@@ -1,25 +1,21 @@
 # employee-records
 
-a [Sails v1](https://sailsjs.com) application
 
+### Run Docker Postgresql
+```
+$ npm install sails-postgresql --save
+$ docker network create moovaz
+$ docker-compose up -d
+```
 
-### Links
+### Dependency
 
-+ [Sails framework documentation](https://sailsjs.com/get-started)
-+ [Version notes / upgrading](https://sailsjs.com/documentation/upgrading)
-+ [Deployment tips](https://sailsjs.com/documentation/concepts/deployment)
-+ [Community support options](https://sailsjs.com/support)
-+ [Professional / enterprise options](https://sailsjs.com/enterprise)
-
-
-### Version info
-
+1)  [Sails v1](https://sailsjs.com)
 This app was originally generated on Sun Jul 19 2020 04:57:10 GMT+0700 (Indochina Time) using Sails v1.2.4.
 
 <!-- Internally, Sails used [`sails-generate@1.17.2`](https://github.com/balderdashy/sails-generate/tree/v1.17.2/lib/core-generators/new). -->
+2) Postgresql
 
-
-This project's boilerplate is based on an expanded seed app provided by the [Sails core team](https://sailsjs.com/about) to make it easier for you to build on top of ready-made features like authentication, enrollment, email verification, and billing.  For more information, [drop us a line](https://sailsjs.com/support).
 
 
 <!--
