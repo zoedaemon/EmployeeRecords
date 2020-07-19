@@ -8,6 +8,24 @@ $ docker network create moovaz
 $ docker-compose up -d
 ```
 
+##### NOTE For Auto Migrate (Seeding)
+
+increase HARD_CODED_DATA_VERSION with value greater than 0
+
+```
+  // This bootstrap version indicates what version of fake data we're dealing with here.
+  var HARD_CODED_DATA_VERSION = 1;
+```
+
+### Run Project
+
+```
+$ sail lift
+```
+
+if success open browser and accessing http://localhost:1337
+login with seeding data as default super admin `email:admin@example.com;password:abc123`
+
 ### Dependency
 
 1.  [Sails v1](https://sailsjs.com)
