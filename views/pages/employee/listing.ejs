@@ -1,0 +1,16 @@
+<div id="listing" v-cloak>
+  <select id="userid" name="userid" data-model="user">
+    <% _.each(users, function(user) { %>
+    <option value="<%= user.id %>"><%= user.fullName %></option>
+    <% }); %>
+  </select>
+</div>
+<%- /*
+<h1>TODO: Implement this page.</h1>
+<p>
+  (See also <em>assets/styles/pages/employee/listing.less</em>,
+  <em>assets/js/pages/employee/listing.page.js</em>, and
+  <em>api/controllers/employee/view-listing.js</em>.)
+</p>
+Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser()
+%>
