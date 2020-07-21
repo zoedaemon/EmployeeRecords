@@ -4,7 +4,7 @@ parasails.registerPage("listing", {
   //  ╩╝╚╝╩ ╩ ╩╩ ╩╩═╝  ╚═╝ ╩ ╩ ╩ ╩ ╚═╝
   data: {
     //…
-    // user: [],
+    vueusers: [],
   },
 
   //  ╦  ╦╔═╗╔═╗╔═╗╦ ╦╔═╗╦  ╔═╗
@@ -13,12 +13,11 @@ parasails.registerPage("listing", {
   beforeMount: function () {
     // Attach any initial data from the server.
     _.extend(this, SAILS_LOCALS);
+    //get data from server and init our vue data
+    this.vueusers = _.map(this.users);
+  },
 
-    // this.user = this.user;
-  },
-  mounted: async function () {
-    //…
-  },
+  mounted: async function () {},
 
   //  ╦╔╗╔╔╦╗╔═╗╦═╗╔═╗╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
   //  ║║║║ ║ ║╣ ╠╦╝╠═╣║   ║ ║║ ║║║║╚═╗

@@ -1,9 +1,21 @@
 <div id="listing" v-cloak>
-  <select id="userid" name="userid" data-model="user">
+  <select id="userid" name="userid" data-model="users">
     <% _.each(users, function(user) { %>
     <option value="<%= user.id %>"><%= user.fullName %></option>
     <% }); %>
   </select>
+  <table class="flex-column flex-md-row justify-content-between">
+    <thead>
+      <th>Name</th>
+    </thead>
+    <tbody>
+      <% _.each(users, function(user) { %>
+      <tr>
+        <td><%= user.fullName %></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
 </div>
 <%- /*
 <h1>TODO: Implement this page.</h1>

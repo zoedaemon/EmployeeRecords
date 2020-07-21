@@ -10,7 +10,7 @@ $ docker-compose up -d
 
 ##### NOTE For Auto Migrate (Seeding)
 
-increase HARD_CODED_DATA_VERSION with value greater than 0
+increase HARD_CODED_DATA_VERSION in config/bootstrap.js with value greater than 0
 
 ```
   // This bootstrap version indicates what version of fake data we're dealing with here.
@@ -20,7 +20,7 @@ increase HARD_CODED_DATA_VERSION with value greater than 0
 ### Run Project
 
 ```
-$ sail lift
+$ sails lift
 ```
 
 if success open browser and accessing http://localhost:1337
