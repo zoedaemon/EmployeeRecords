@@ -14,7 +14,7 @@ parasails.registerPage("listing", {
     // Attach any initial data from the server.
     _.extend(this, SAILS_LOCALS);
     //get data from server and init our vue data
-    this.vueusers = _.map(this.users);
+    this.vueusers = this._marshallUser(this.users); //or directly call _.map(...)
   },
 
   mounted: async function () {},
@@ -24,5 +24,11 @@ parasails.registerPage("listing", {
   //  ╩╝╚╝ ╩ ╚═╝╩╚═╩ ╩╚═╝ ╩ ╩╚═╝╝╚╝╚═╝
   methods: {
     //…
+    _marshallUser: function (users) {
+      return _.map(users, (user) => {
+        user.password = null;
+        return user;
+      });
+    },
   },
 });
